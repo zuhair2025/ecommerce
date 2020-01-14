@@ -15,13 +15,13 @@
 //    return view('layouts.main');
 //});
 
-Route::get('/','DashboardController@index');
+Route::get('/','Admin\DashboardController@index');
 
-Route::get('/zuhair','DashboardController@zuhair')->name('me.zuhair');
-Route::get('/zubair','DashboardController@zubair')->name('me.zubair');
+Route::get('/zuhair','Admin\DashboardController@zuhair')->name('me.zuhair');
+Route::get('/zubair','Admin\DashboardController@zubair')->name('me.zubair');
 
-Route::get('charts/zawad','DashboardController@zawad')->name('me.zawad');
-Route::get('charts/mizan','DashboardController@mizan')->name('me.mizan');
+Route::get('charts/zawad','Admin\DashboardController@zawad')->name('me.zawad');
+Route::get('charts/mizan','Admin\DashboardController@mizan')->name('me.mizan');
 
 Route::resource('posts','PostController');
 
@@ -33,16 +33,16 @@ Route::get('sales/orders','SaleController@order')->name('sales.orders');
 Route::get('sales/shipments','SaleController@shipment')->name('sales.shipments');
 Route::get('sales/invoices','SaleController@invoice')->name('sales.invoices');
 
-Route::get('categories','CategoryController@index')->name('categories.index');
-Route::post('category/store','CategoryController@store')->name('category.store');
+Route::get('categories','Admin\CategoryController@index')->name('categories.index');
+Route::post('category/store','Admin\CategoryController@store')->name('category.store');
 
 
-Route::get('products','ProductController@index')->name('products.index');
-Route::post('product/store','ProductController@store')->name('product.store');
+Route::get('products','Admin\ProductController@index')->name('products.index');
+Route::post('product/store','Admin\ProductController@store')->name('product.store');
 
-Route::get('home','FrontMainController@index');
+Route::get('home','Front\FrontMainController@index');
 Route::get('category','CategoryController@frontcat');
-Route::get('product','ProductController@frontproduct');
+Route::get('product','Front\FrontProductController@index');
 Route::get('cart','CartController@index');
 Route::get('checkout','CheckoutController@index');
 Route::get('contact','ContactController@index');

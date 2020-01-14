@@ -25,7 +25,7 @@
 
             @can('isAdmin')
             <li class="nav-item {{ isActive(['/','dashboard*']) }}">
-                <a href="{{ action('DashboardController@index') }}" class="nav-link {{ isActive('/') }}">
+                <a href="{{ action('Admin\DashboardController@index') }}" class="nav-link {{ isActive('/') }}">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
                         Dashboard

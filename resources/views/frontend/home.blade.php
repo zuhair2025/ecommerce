@@ -133,9 +133,10 @@
                             <div class="product_image"><img src="{{asset('images/product_1.jpg')}}" alt=""></div>
                             <div class="product_extra product_new"><a href="categories.html">New</a></div>
                             <div class="product_content">
-                                <div class="product_title"><a href="product.html">{{$product->getName()}}</a></div>
+                            <div class="product_title"><a href="{{url('product/'.$product->getId())}}">{{$product->getName()}}</a></div>
                                 <div class="product_price">${{$product->getPrice()}}</div>
                             </div>
+                            {{-- <div class="pull-right btn btn-success" ><a style="color:white" href="{{route('product.addToCart',['id' =>$product->getId()])}}">Add to cart</a></div> --}}
                         </div>
                     @endforeach
                     </div>

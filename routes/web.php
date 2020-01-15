@@ -40,9 +40,13 @@ Route::post('category/store','Admin\CategoryController@store')->name('category.s
 Route::get('products','Admin\ProductController@index')->name('products.index');
 Route::post('product/store','Admin\ProductController@store')->name('product.store');
 
-Route::get('home','Front\FrontMainController@index');
+Route::get('home','Front\FrontMainController@index')->name('home.index');
 Route::get('category','CategoryController@frontcat');
-Route::get('product','Front\FrontProductController@index');
-Route::get('cart','CartController@index');
+Route::get('product','Front\FrontProductController@index')->name('product.index');
+Route::get('product/{id}','Front\FrontProductController@show');
 Route::get('checkout','CheckoutController@index');
 Route::get('contact','ContactController@index');
+
+Route::get('/add-to-cart/{id}','Front\FrontProductController@getAddToCart')->name('product.addToCart');
+// Route::get('cart','Front\CartController@index')->name('cart.index');
+Route::get('/shopping-cart','Front\FrontProductController@getCart')->name('product.shoppingCart');

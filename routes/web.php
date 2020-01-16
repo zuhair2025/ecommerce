@@ -44,7 +44,7 @@ Route::get('home','Front\FrontMainController@index')->name('home.index');
 Route::get('category','CategoryController@frontcat');
 Route::get('product','Front\FrontProductController@index')->name('product.index');
 Route::get('product/{id}','Front\FrontProductController@show');
-Route::get('checkout','CheckoutController@index');
+Route::get('checkout','Front\CheckoutController@index')->name('checkout.index');
 Route::get('contact','ContactController@index');
 
 Route::get('/add-to-cart/{id}','Front\FrontProductController@getAddToCart')->name('product.addToCart');

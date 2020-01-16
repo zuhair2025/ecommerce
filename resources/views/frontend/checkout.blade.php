@@ -158,7 +158,7 @@
                                 </li>
                                 <li class="d-flex flex-row align-items-center justify-content-start">
                                     <div class="order_list_title">Total</div>
-                                    <div class="order_list_value ml-auto">$59.90</div>
+                                    <div class="order_list_value ml-auto">${{$total}}</div>
                                 </li>
                             </ul>
                         </div>

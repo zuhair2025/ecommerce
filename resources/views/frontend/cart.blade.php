@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <!-- Price -->
-                        @dd($product)
+                       
                     <div class="cart_item_price">$</div>
                         <!-- Quantity -->
                         <div class="cart_item_quantity">
@@ -146,7 +146,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="button checkout_button"><a href="#">Proceed to checkout</a></div>
+                    <div class="button checkout_button"><a href="{{route('checkout.index')}}">Proceed to checkout</a></div>
                     </div>
                 </div>
                 @else
